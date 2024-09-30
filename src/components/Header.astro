@@ -1,0 +1,90 @@
+---
+import Navigation from "./Navigation.astro";
+import Button from "./Button.astro"
+
+---
+
+<header>
+    <Navigation />
+    <section class="header">
+        <div class="box_1">
+            <h1 class="title">
+                Clases de Guitarra
+            </h1>
+            <p class="text">
+                Domina la guitarra con nuestras clases exclusivas.<br>
+                Experiencia educativa de alta calidad para todos los niveles.
+            </p>
+            <Button />
+        </div>
+        <div class="box_2">
+            <img class="img" src="https://images.unsplash.com/photo-1535587566541-97121a128dc5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+    </section>
+</header>
+
+<style>
+    .header{
+        position: relative;
+        display: block;
+        align-items: center;
+        width: 100%;
+        margin-top: 4rem;
+    }
+
+    .box_1{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .box_2{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .title{
+        margin: 0;
+        color: black;
+        font-size: 4rem;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .img{
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+
+    .text{
+        text-align: center;
+        font-family: "Quattrocento", serif;
+        font-size: large;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+        .header{
+            display: flex;
+            margin-top: 0;
+        }
+
+        .title{
+            font-size: 6rem;
+            text-align: left;
+            padding-left: 3rem;
+        }
+        
+        .text{
+            font-size: x-large;
+            text-align: left;
+            padding-left: 3rem;
+        }
+    }
+</style>
