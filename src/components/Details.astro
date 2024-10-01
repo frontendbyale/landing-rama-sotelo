@@ -1,87 +1,35 @@
 ---
-
+const {question, response} = Astro.props
 ---
     
-<section class="details">
-    <h2 class="title">Preguntas Frecuentes</h2>
-    <article class="descriptions">
-        <details open>
-                <summary>
-                    ¿Ofreces clases particulares?
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
-                        </svg>
-                    </div>
-                </summary>    
-            <p>
-                Sí, por el momento es la unica modalidad que manejo.
-            </p>
-        </details>
-        <details open>
-            <summary>
-                ¿Qué estilos de música enseñas?
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
-                    </svg>
-                </div>
-            </summary>
-            <p>
-                Enseño varios estilos, incluyendo rock, blues, jazz y música clásica, entre otros.
-            </p>
-        </details>
-        <details open>
-            <summary>
-                ¿Necesito tener mi propia guitarra?
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
-                    </svg>
-                </div>
-            </summary>
-            <p>
-                Recomiendo tener una guitarra propia para practicar en casa, aunque no es obligatorio para las clases iniciales.
-            </p>
-        </details>
-        <details open>
-            <summary>
-                ¿Cuánto duran las clases?
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
-                    </svg>
-                </div>
-            </summary>
-            <p>
-                Las clases tienen una duración aproximada de una hora. Ofrezco flexibilidad en los horarios según disponibilidad.
-            </p>
-        </details>
-    </article>
-</section>
+
+    
+<details class="detail" open>
+    <summary>
+        {question}
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+            </svg>
+        </div>
+    </summary>    
+    <p>
+        {response}
+    </p>
+</details>
 
 
 <style>
-
-    .details{
-        display: grid;
-        width: 100%;
-        background-color:rgba(233, 231, 231, 0.541);
-        text-align: center;
-        place-content: center;
-    }
-
     .svg{
         width: 24px;
         height: 24px;
     }
 
-    .descriptions details{
+    .detail{
         box-shadow: rgba(17, 24, 39, 0.2) 0px -1px 0px 0px inset;
-        transition: 1s ;
     }
 
-    .descriptions summary{
+    .detail summary{
         font-size: 1.5rem;
         margin-top: 2rem;
         margin-bottom: 2rem;
@@ -89,7 +37,7 @@
         cursor: pointer;
     }
 
-    .descriptions p{
+    .detail p{
         font-family: "Quattrocento", serif;
         font-size: large;
         font-weight: 400;
@@ -98,28 +46,17 @@
         padding-bottom: 2rem;
     }
 
-    .title{
-        padding-top: 2rem;
-        font-size: 3rem;
-        font-weight: 400;
-        margin-bottom: 3rem;
-    }
-
     @media screen and (min-width: 1024px) {
 
-        .descriptions details{
+        .detail {
             width: 1000px;
         }
 
-        .title{
-            font-size: 4rem;
-        }
-
-        .descriptions p{
+        .detail p{
             font-size: x-large;
         }
 
-        .descriptions summary{
+        .detail summary{
             font-size: 2rem;
         }
     }

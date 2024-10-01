@@ -1,0 +1,39 @@
+---
+import Details from "./Details.astro";
+---
+
+<section class="details">
+    <h2 class="title">Preguntas Frecuentes</h2>
+    <article>
+        <Details question="¿Ofreces clases particulares?" response="Sí, por el momento es la unica modalidad que manejo." />
+        <Details question="¿Qué estilos de música enseñas?" response="Enseño varios estilos, incluyendo rock, blues, jazz y música clásica, entre otros." />
+        <Details question="¿Necesito tener mi propia guitarra?" response="Recomiendo tener una guitarra propia para practicar en casa, aunque no es obligatorio para las clases iniciales." />
+        <Details question="¿Cuánto duran las clases?" response="Las clases tienen una duración aproximada de una hora. Ofrezco flexibilidad en los horarios según disponibilidad." />
+    </article>
+</section>
+
+<style>
+    .details{
+        display: grid;
+        width: 100%;
+        background-color:rgba(233, 231, 231, 0.541);
+        text-align: center;
+        place-content: center;
+    }
+
+    .title{
+        padding-top: 2rem;
+        font-size: 3rem;
+        font-weight: 400;
+        margin-bottom: 3rem;
+    }
+
+    @media screen and (min-width: 1024px){
+        
+        .title{
+            font-size: 4rem;
+        }
+    }
+
+
+</style>
