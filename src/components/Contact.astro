@@ -1,0 +1,39 @@
+---
+import Button from "./Button.astro"
+---
+
+<section id="contacto">
+    <h2 class="title">Ponete en contacto</h2>
+    <p class="text">Envíame un mensaje y me comunico con vos tan pronto como pueda.</p>
+    <div class="div_buttons">
+        <Button title="WhatsApp" url="https://wa.me/?text=Hola%20Rama!%20Quiero%20saber%20sobre%20las%20clases%20de%20guitarra"/>
+        <Button title="Instagram" url=""/>
+    </div>
+    
+</section>
+
+<style>
+    .title{
+        margin: 0;
+        color: black;
+        font-size: 4rem;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .text{
+        text-align: center;
+        font-family: "Quattrocento", serif;
+        font-size: x-large;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .div_buttons{
+        display: flex;
+        justify-content: center;
+        margin-right: 3rem;
+    }
+</style>
