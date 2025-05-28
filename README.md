@@ -35,7 +35,7 @@ Luego accedé a `http://localhost:4321` en tu navegador.
 ---
 ## Demo
 
-[Rama Sotelo](https://ramirosotelo.netlify.app)
+[Rama Sotelo](https://ramasotelo.netlify.app)
 
 ## Autor
 
