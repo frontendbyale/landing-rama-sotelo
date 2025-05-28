@@ -10,6 +10,7 @@
 <style>
 
     .logo{
+        padding-top: 1rem;
         color: black;
         font-size: x-large;
         font-weight: 400;
@@ -24,7 +25,8 @@
     }
 
     footer{
-        display: block;
+        display: flex;
+        flex-direction: column;
         text-align: center;
         height: 100px;
         margin-top: 1rem;
@@ -33,12 +35,12 @@
 
     @media screen and (min-width: 1024px) {
         footer{
-            display: flex;
+            flex-direction: row;
             justify-content: space-between;
             align-items: center;
         }
 
-        a{
+        a{ 
             margin-right: 2rem;
         }
 
